@@ -34,7 +34,7 @@ public class AdminQuizController {
 	@PutMapping("/")
 	public ResponseEntity<? > update(@RequestBody Quiz quiz) {
 		this.adminQuizService.updateQuiz(quiz);
-		return ResponseEntity.ok("update");
+		return ResponseEntity.ok("updated");
 	}
 
 	@GetMapping("/")
@@ -48,8 +48,9 @@ public class AdminQuizController {
 	}
 
 	@DeleteMapping("/{qid}")
-	public void delete(@PathVariable("qid") Long qid) {
+	public String deleteQuiz(@PathVariable("qid") Long qid) {
 		this.adminQuizService.deleteQuiz(qid);
+		return "Deleted "+qid;
 	}
 	
 	@GetMapping("/category/{cid}")

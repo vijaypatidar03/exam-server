@@ -38,10 +38,11 @@ public class AdminQuizServiceImpl implements AdminQuizService {
 	}
 
 	@Override
-	public void deleteQuiz(Long quizId) {
+	public String deleteQuiz(Long quizId) {
 		Quiz quiz = new Quiz();
 		quiz.setqId(quizId);
 		this.adminQuizRepository.delete(quiz);
+		return "deteled "+quizId;
 	}
 
 	@Override

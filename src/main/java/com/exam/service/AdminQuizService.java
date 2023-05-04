@@ -18,7 +18,7 @@ public interface AdminQuizService {
 
 	public Quiz getQuiz(Long quizId);
 
-	public void deleteQuiz(Long quizId);
+	public String deleteQuiz(Long quizId);
 
 	public List<Quiz> getQuizzesOfCategory(Category category);
 

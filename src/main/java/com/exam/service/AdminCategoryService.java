@@ -16,5 +16,5 @@ public interface AdminCategoryService {
 
 	public Category getCategory(Long categoryId);
 
-	public void deleteCategory(Long categoryId);
+	public String deleteCategory(Long categoryId);
 }
